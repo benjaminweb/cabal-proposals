@@ -116,3 +116,7 @@ Yes, a rough outline of implementation plan / which parts of which existing syst
  - feedback: https://github.com/NorfairKing/feedback
  - Watchexec: https://github.com/watchexec/watchexec
  - entr: https://github.com/eradman/entr
+
+### Discussions (non-exhaustive yet)
+
+ - https://discourse.haskell.org/t/tooling-improvement-integrate-test-watcher-cabal/14623
