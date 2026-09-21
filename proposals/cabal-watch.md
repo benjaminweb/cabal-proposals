@@ -1,4 +1,4 @@
-# Implement `--watch` switch to make reload only changed code and run tests fast
+# Tooling Improvement // Implement `--watch` switch for reloading only changed code and running tests fast
 
 ## Summary
 
@@ -30,7 +30,7 @@ Integrate file watching and incremental code reload so `cabal test --watch` beco
 
 ## Alternatives Considered
 
-What nnnnn approaches were considered?
+What other approaches were considered?
 
   * document `ghcid -c 'cabal repl --enable-multi-repl test:sandwich lib:mylib' --test Main.main --warnings` more prominently -- discouraged because of external dependency and complicated syntax
   * https://cabal.readthedocs.io/en/stable/external-commands.html (it should not be an external command as it is the test suite that is being run using cabal)
@@ -59,7 +59,7 @@ What nnnnn approaches were considered?
 
   * Language users:
   
-    * Both newcomers to language who shall not become disappointed by missing test-runner.
+    * Newcomers to the language who shall not become disappointed by missing test-runner.
     * Experienced users who all to long have accepted missing what should not be missing but builtin.
     * Basically most users who benefit from rapid feedback of their test-suite.
 
@@ -78,7 +78,7 @@ Though, this document can be a starting point.
 
 *Are you willing to implement this yourself?*
 
-No, but I can help in coordinating..
+No, but I can help in coordinating.
 
 *What is the expected timeline?*
 
@@ -88,7 +88,7 @@ Unclear.
 
 *Are there any unresolved questions or areas needing further input?*
 
-Yes, a rough outline of which parts of which existing systems (GHC, ghcid) need to be re-used.
+Yes, a rough outline of implementation plan / which parts of which existing systems (GHC, ghcid) need to be re-used and how they need to be brought together.
 
  - Who knows what needs to be done?
  - Which parts of existing systems need to be re-used (GHC, ghcid, etc.)?
@@ -96,17 +96,18 @@ Yes, a rough outline of which parts of which existing systems (GHC, ghcid) need 
 
 ## References
 
-Links to related issues, discussions, or previous work.
+*Links to related issues, discussions, or previous work.*
 
 Previous work:
 
  - ghcid
- - george.fst working on file watching tool specifically for Obelisk, with separate REPL processes for the backend and the Wasm frontend. I’ll try to upstream what I can to GHCI
+ - george.fst [working](https://discourse.haskell.org/t/tooling-improvement-integrate-test-watcher-cabal/14623/5) on file watching tool specifically for Obelisk, with separate REPL processes for the backend and the Wasm frontend. I’ll try to upstream what I can to GHCI
  - WIP ghci watch command: https://gitlab.haskell.org/ghc/ghc/-/merge_requests/14440
  - ghciwatch: https://github.com/MercuryTechnologies/ghciwatch/
  - cabal watch command: https://github.com/haskell/cabal/issues/5252
- - ghcid —test https://github.com/ndmitchell/ghcid/issues/191
- - tricorder tricorder
+ - ghcid --test https://github.com/ndmitchell/ghcid/issues/191
+ - tricorder: https://github.com/tweag/tricorder
+ - buck2 for haskell: https://github.com/simonmar/haskell-buck2
 
 Other related work:
 
