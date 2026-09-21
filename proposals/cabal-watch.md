@@ -98,7 +98,7 @@ Yes, a rough outline of implementation plan / which parts of which existing syst
 
 *Links to related issues, discussions, or previous work.*
 
-Previous work:
+### Previous work
 
  - ghcid
  - george.fst [working](https://discourse.haskell.org/t/tooling-improvement-integrate-test-watcher-cabal/14623/5) on file watching tool specifically for Obelisk, with separate REPL processes for the backend and the Wasm frontend. I’ll try to upstream what I can to GHCI
@@ -109,7 +109,7 @@ Previous work:
  - tricorder: https://github.com/tweag/tricorder
  - buck2 for haskell: https://github.com/simonmar/haskell-buck2
 
-Other related work:
+### Other related work
 
  - Steel Overseer: https://github.com/schell/steeloverseer
  - Watchman: https://facebook.github.io/watchman/
